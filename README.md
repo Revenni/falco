@@ -6,7 +6,7 @@ Ansible role providing falco+sysdig deployment.
 Falco custom rules can be defined in ```templates/falco_rules_local.yaml.j2```.
 
 [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
-[![Licence](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://tldrlegal.com/license/mit-license)a
+[![Licence](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://tldrlegal.com/license/mit-license)
 
 Requirements
 ------------
@@ -19,13 +19,13 @@ Role Variables
 ### Generic variables (declared in defaults/main.yml + overridden in vars/main.yml)
 * ```falco_rules_files``` (default list, minus k8) - List of rule files
 * ```falco_json_output``` (true) - json output - needs to be true for slack integration
-* ```falco_json_include_output_property``` (true) - 
+* ```falco_json_include_output_property``` (true) - output property
 
 * ```falco_output_rate``` (1) - falco output per second after burst below
 * ```falco_output_rate_burst``` (1000) - falso output burst
 
 * ```falco_syslog_output_enabled``` (true) - log to syslog
-* ```
+
 * ```falco_file_output_enabled``` (false) - output to file
 * ```falco_file_output_keepalive``` (false) - keepalive
 * ```falco_file_output_filename``` (./events.txt) - filename to store output in

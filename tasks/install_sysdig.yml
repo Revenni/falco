@@ -1,5 +1,5 @@
 ---
-# tasks file for revenni.sysdig
+# tasks file for revenni.falco
 
 - name: install sysdig | repo key
   apt_key:
