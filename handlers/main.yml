@@ -1,0 +1,9 @@
+---
+# handlers file for revenni.falco
+
+- name: falco | restart
+  systemd:
+    name: falco
+    state: restarted
+    daemon-reload: yes
+    enabled: yes

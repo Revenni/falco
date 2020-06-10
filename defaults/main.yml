@@ -1,0 +1,44 @@
+---
+# defaults file for revenni.falco
+
+falco_rules_files:
+  - /etc/falco/falco_rules.yaml
+  - /etc/falco/falco_rules.local.yaml
+  - /etc/falco/rules.d
+
+# must be true for slack alerts
+falco_json_output: true
+falco_json_include_output_property: true
+
+falco_output_rate: 1
+falco_output_rate_burst: 1000
+
+falco_syslog_output_enabled: true
+
+falco_file_output_enabled: false
+falco_file_output_keepalive: false
+falco_file_output_filename: ./events.txt
+
+falco_file_stdoutput_enabled: true
+
+falco_webserver_enabled: false
+falco_webserver_listen_port: 8765
+falco_webserver_k8s_audit_endpoint: /k8s_audit
+falco_webserver_ssl_enabled: false
+falco_webserver_ssl_cert: /etc/falco/falco.pem
+
+# Slack hooks are sensitive, consider vault
+# echo -n "https://hooks.slack.com/services/..." | ansible-vault encrypt_string --stdin-name 'falco_slack_webhook'
+falco_slack_enabled: false
+falco_slack_webhook: https://hooks.slack.com/services/...
+
+falco_http_output_enabled: false
+falco_http_url: http://some.url
+
+falco_grpc_enabled: false
+falco_grpc_bind_address: 127.0.0.1:5600
+falco_grpc_threadiness: 8
+falco_grpc_private_key: /etc/falco/certs/server.key
+falco_grpc_private_cert_chain: /etc/falco/certs/server.crt
+falco_grpc_private_root_certs: /etc/falco/certs/ca.crt
+falco_grpc_output_service: false

@@ -1,0 +1,20 @@
+---
+# tasks file for revenni.falco
+
+- name: falco | configure falco
+  template:
+    src: falco.yaml.j2
+    dest: /etc/falco/falco.yaml
+    owner: root
+    group: root
+    mode: '0640'
+  notify: falco | restart
+
+- name: falco | configure local rules
+  template:
+    src: falco_rules_local.yaml.j2
+    dest: /etc/falco/falco_rules.local.yaml
+    owner: root
+    group: root
+    mode: '0640'
+  notify: falco | restart
