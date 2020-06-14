@@ -6,6 +6,7 @@ Ansible role providing falco+sysdig deployment.
 Falco custom rules can be defined in ```templates/falco_rules_local.yaml.j2```.
 
 [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
+[![Platforms](http://img.shields.io/badge/platforms-debian-lightgrey.svg?style=flat)](#)
 [![Licence](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://tldrlegal.com/license/mit-license)
 
 Requirements
