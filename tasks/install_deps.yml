@@ -6,3 +6,4 @@
     update_cache: yes
     pkg:
     - gnupg
+    - ca-certificates
