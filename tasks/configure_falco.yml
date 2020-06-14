@@ -8,7 +8,6 @@
     owner: root
     group: root
     mode: '0640'
-  notify: falco | restart
 
 - name: falco | configure local rules
   template:
@@ -17,4 +16,11 @@
     owner: root
     group: root
     mode: '0640'
-  notify: falco | restart
+
+- name: falco | start
+  systemd:
+    name: falco
+    state: started
+    daemon-reload: yes
+    enabled: yes
+
