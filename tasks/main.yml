@@ -1,6 +1,7 @@
 ---
 # tasks file for revenni.falco
 
+- include: install_deps.yml
 - include: install_sysdig.yml
 - include: install_falco.yml
 - include: configure_falco.yml

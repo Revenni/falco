@@ -1,0 +1,8 @@
+---
+# tasks file for revenni.falco
+
+- name: install deps | packages
+  apt:
+    update_cache: yes
+    pkg:
+    - gnupg
